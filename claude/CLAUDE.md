@@ -4,7 +4,8 @@
 - Apply KISS: suggest the simplest solution first. If uncertain between multiple approaches, present options rather than committing to one.
 
 ## Debugging
-- When debugging, present max 2 most likely hypotheses and search the web for known issues related to them.
+- When debugging, present max 2 most likely hypotheses.
+- Search the web for known issues if you suspect the issue in an underlying third-party API. Do not attempt to patch third-party API.
 - When fixing a failing component, isolate changes to that specific component. Do not investigate or modify unrelated systems unless the failing component's dependencies require it.
 - In monorepos, prefer workspace-specific dependency changes over root-level resolutions unless multiple workspaces need the constraint.
 - When the user provides explicit guidance about where a problem is located, trust that guidance and focus investigation there. Do not expand scope without user confirmation.
