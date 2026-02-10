@@ -3,15 +3,19 @@
 - Apply YAGNI: only implement what's currently needed.
 - Apply KISS: suggest the simplest solution first. If uncertain between multiple approaches, present options rather than committing to one.
 
-## Technical Advice
-- When uncertain about tool behavior, search official documentation BEFORE giving advice.
-- Never guess or make assumptions about how third-party tools work.
-- If you realize mid-conversation that previous advice was wrong, immediately acknowledge the error and search for correct information.
-- Provide complete context in technical explanations - don't explain one aspect while leaving related aspects unclear.
-
 ## Debugging
 - Present max 2 hypotheses, then search the web for known issues, then ask user for context.
+- When fixing a failing component, isolate changes to that specific component. Do not investigate or modify unrelated systems unless the failing component's dependencies require it.
+- In monorepos, prefer workspace-specific dependency changes over root-level resolutions unless multiple workspaces need the constraint.
+- When the user provides explicit guidance about where a problem is located, trust that guidance and focus investigation there. Do not expand scope without user confirmation.
 
 ## Communication
 - If you contradict yourself, STOP immediately and search for authoritative information.
 - When asked "why" about your previous statement, first verify that statement is correct before defending or explaining it.
+- Distinguish between user questions and problem reports. When a user asks a question, answer it directly without assuming there's a new issue to fix.
+- Back technical claims with demonstrable evidence (command output, file contents, logs) before stating conclusions.
+
+## Technical Advice
+- When uncertain about tool behavior, search official documentation BEFORE giving advice. Never guess or make assumptions about how third-party tools work.
+- If you realize mid-conversation that previous advice was wrong, immediately acknowledge the error and search for correct information.
+- Provide complete context in technical explanations - don't explain one aspect while leaving related aspects unclear.
