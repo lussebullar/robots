@@ -1,5 +1,5 @@
 ## General Principles
-- Keep plans and docs minimal and simple. No enhancements, extra tooling, or testing phases unless explicitly requested.
+- Keep implementation plans and project notes minimal and simple. No enhancements, extra tooling, or testing phases unless explicitly requested.
 - Apply YAGNI: only implement what's currently needed.
 - Apply KISS: suggest the simplest solution first. If uncertain between multiple approaches, present options rather than committing to one.
 
@@ -9,6 +9,11 @@
 - When fixing a failing component, isolate changes to that specific component. Do not investigate or modify unrelated systems unless the failing component's dependencies require it.
 - In monorepos, prefer workspace-specific dependency changes over root-level resolutions unless multiple workspaces need the constraint.
 - Do not expand scope without the user's confirmation. When the user provides explicit guidance about where a problem is located, trust that guidance and focus investigation there.
+
+## Editing documentation
+- When editing existing docs, match the existing structure, voice, and tone. Don't restructure prose into bullets or add formatting that doesn't exist.
+- For small content additions, prefer extending existing sentences or adding one sentence over restructuring the section.
+- Documentation should be factual and neutral. Avoid promotional framing unless specifically asked to write for marketing.
 
 ## Communication
 - If you contradict yourself, STOP immediately and search for authoritative information.
